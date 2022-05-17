@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import AuthModal from "../components/AuthModal";
 import Nav from "../components/Nav";
-import { Button, ContainerHome, PrimaryTitle } from "../components/style";
+import { Button, ContainerHome, PrimaryTitle,Animation } from "../components/style";
 
 const Home = () => {
   const [showAuthModal, setShowAuthModal] = useState(false);
@@ -15,26 +15,29 @@ const Home = () => {
 
   return (
     <ContainerHome>
+      <Animation>
+
       <Nav
         minimal={false}
         authToken={authToken}
         showAuthModal={showAuthModal}
         setShowAuthModal={setShowAuthModal}
         setIsSignUp={setIsSignUp}
-      />
-      <div style={{ marginTop: "40px" }}>
+        />
+      <div style={{ marginTop: "15%" }}>
         <PrimaryTitle>Swip Right®</PrimaryTitle>
         <Button onClick={handleClick}>
           {authToken ? "Signout" : "Create Account"}
         </Button>
         {showAuthModal && (
           <AuthModal
-            setShowAuthModal={setShowAuthModal}
-            isSignUp={isSignUp}
-            setIsSignUp={setIsSignUp}
+          setShowAuthModal={setShowAuthModal}
+          isSignUp={isSignUp}
+          setIsSignUp={setIsSignUp}
           />
-        )}
+          )}
       </div>
+          </Animation>
     </ContainerHome>
   );
 };

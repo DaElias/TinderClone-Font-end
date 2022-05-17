@@ -1,11 +1,15 @@
 import styled, { css, keyframes } from "styled-components";
-import { headShake, fadeOutDown
-    // , shake 
+import {
+  headShake,
+  fadeOutDown,
+  bounceInDown,
+  // , shake
 } from "react-animations";
 import imgFond from "../../images/6e9794bcedeecf5a8f8f41338a2a7345.webp";
 // const shakeAnimation = keyframes`${shake}`;
 const headShakeAnimation = keyframes`${headShake}`;
 const fadeOutDownAnimation = keyframes`${fadeOutDown}`;
+const bounceInDownAnimation = keyframes`${bounceInDown}`;
 
 export const PrimaryTitle = styled.h1`
   font-size: 90px;
@@ -44,6 +48,10 @@ export const SecundaryButton = styled.button`
       opacity: 0.5;
       cursor: not-allowed;
     `}
+`;
+
+export const Animation = styled.div`
+  animation: 1s ${bounceInDownAnimation};
 `;
 export const ContainerHome = styled.div`
   width: 100vw;
