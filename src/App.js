@@ -6,6 +6,7 @@ import Onboarding from "./pages/Onboarding";
 import { GlobalStyle } from "./components/style/GlobalStyle";
 
 const App = () => {
+
   return (
     <BrowserRouter>
       <GlobalStyle />
